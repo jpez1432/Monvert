@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Monvert" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug x86">
+				<Option output="Monvert_x86D" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Binary/Obj/Debug32/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add option="-g" />
+					<Add directory="../../Dependencies/glm" />
+					<Add directory="../../Dependencies/Win32xx 860/include" />
+					<Add directory="../../Dependencies/soil2/src/SOIL2" />
+				</Compiler>
+				<Linker>
+					<Add option="-static-libstdc++" />
+					<Add option="-static-libgcc" />
+					<Add option="-static" />
+					<Add option="-m32" />
+					<Add library="libcomdlg32" />
+					<Add library="gdi32" />
+					<Add library="comctl32" />
+					<Add library="ole32" />
+					<Add library="version" />
+					<Add library="libsoil2-static-lib" />
+					<Add library="opengl32" />
+					<Add directory="../../Dependencies/soil2/make/windows/.objs32" />
+				</Linker>
+			</Target>
+			<Target title="Release x86">
+				<Option output="./Monvert_x86" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Binary/Obj/Release32/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m32" />
+					<Add directory="../../Dependencies/glm" />
+					<Add directory="../../Dependencies/Win32xx 860/include" />
+					<Add directory="../../Dependencies/soil2/src/SOIL2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static-libstdc++" />
+					<Add option="-static-libgcc" />
+					<Add option="-static" />
+					<Add option="-m32" />
+					<Add library="libcomdlg32" />
+					<Add library="gdi32" />
+					<Add library="comctl32" />
+					<Add library="ole32" />
+					<Add library="version" />
+					<Add library="libsoil2-static-lib" />
+					<Add library="opengl32" />
+					<Add directory="../../Dependencies/soil2/make/windows/.objs32" />
+				</Linker>
+			</Target>
+			<Target title="Release x64">
+				<Option output="./Monvert_x64" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Binary/Obj/Release64/" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_x64" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m64" />
+					<Add directory="../../Dependencies/glm" />
+					<Add directory="../../Dependencies/Win32xx 860/include" />
+					<Add directory="../../Dependencies/soil2/src/SOIL2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static-libstdc++" />
+					<Add option="-static-libgcc" />
+					<Add option="-static" />
+					<Add option="-m64" />
+					<Add library="libcomdlg32" />
+					<Add library="gdi32" />
+					<Add library="comctl32" />
+					<Add library="ole32" />
+					<Add library="version" />
+					<Add library="libsoil2-static-lib" />
+					<Add library="opengl32" />
+					<Add directory="../../Dependencies/soil2/make/windows/.objs64" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All Builds" targets="Debug x86;Release x86;Release x64;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Sources/CBin.cpp" />
+		<Unit filename="Sources/CBin.hpp" />
+		<Unit filename="Sources/CObj.cpp" />
+		<Unit filename="Sources/CObj.hpp" />
+		<Unit filename="Sources/CTexture.cpp" />
+		<Unit filename="Sources/CTexture.hpp" />
+		<Unit filename="Sources/Common.cpp" />
+		<Unit filename="Sources/Common.hpp" />
+		<Unit filename="Sources/Dialog.cpp" />
+		<Unit filename="Sources/Dialog.hpp" />
+		<Unit filename="Sources/Main.cpp" />
+		<Unit filename="Sources/Resources.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="Sources/StdAfx.cpp" />
+		<Unit filename="Sources/Stdafx.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
